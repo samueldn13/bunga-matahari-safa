@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#dff2f5" />
+    <title>Taman Bunga Matahari milik Safa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page-entering">
+    <header class="topbar page-shell">
+      <a class="brand" href="#" aria-label="Taman Bunga Matahari milik Safa">
+        <span class="brand-flower" aria-hidden="true">🌻</span>
+        <span>Taman Bunga Matahari milik Safa</span>
+      </a>
+    </header>
+
+    <div class="meadow" aria-hidden="true"></div>
+
+    <main>
+      <section class="hero page-shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title">A little<br />sunflower<br /><span>garden.</span></h1>
+          <p class="hero-description">You make my world a little brighter.</p>
+          <a class="primary-link" href="#little-magic">Take a little look <span aria-hidden="true">↘</span></a>
+        </div>
+
+        <div class="garden" aria-label="Buket mungil berisi banyak bunga matahari yang bergoyang">
+          <span class="sun" aria-hidden="true"></span>
+          <span class="sparkle one" aria-hidden="true">✳</span>
+          <span class="sparkle two" aria-hidden="true">✦</span>
+          <span class="sparkle three" aria-hidden="true">✧</span>
+          <span class="sparkle four" aria-hidden="true">♡</span>
+          <span class="sparkle five" aria-hidden="true">✿</span>
+          <div class="flower-stage">
+            <div class="grass" aria-hidden="true"></div>
+            <div class="bouquet-wrap" aria-hidden="true"></div>
+            <div class="bouquet-ribbon" aria-hidden="true"><i></i><i></i><b></b></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="garden-section page-shell" id="little-magic" aria-labelledby="little-magic-title" hidden>
+        <div class="section-heading">
+          <h2 id="little-magic-title">A little magic</h2>
+          <p>open for a tiny flutter of joy ✿</p>
+        </div>
+        <div class="cards">
+          <button class="moment-card" id="open-magic" type="button" aria-haspopup="dialog">
+            <span class="card-top"><span class="card-index">01 — A LITTLE MAGIC</span><span class="card-icon" aria-hidden="true">✨</span></span>
+            <span class="card-art" aria-hidden="true">🦋</span>
+            <span class="card-title">The soft moments</span>
+            <span class="card-subtitle">tap to let a little magic fly</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="garden-section page-shell" id="little-note" aria-labelledby="little-note-title" hidden>
+        <div class="section-heading">
+          <h2 id="little-note-title">A little note</h2>
+          <p>one more little thing ✿</p>
+        </div>
+        <div class="cards">
+          <button class="moment-card" id="open-letter" type="button" aria-haspopup="dialog">
+            <span class="card-top"><span class="card-index">02 — A LITTLE NOTE</span><span class="card-icon" aria-hidden="true">💌</span></span>
+            <span class="card-art" aria-hidden="true">🌷</span>
+            <span class="card-title">A Letter</span>
+            <span class="card-subtitle">tap to open your letter</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer page-shell" hidden>
+      <span class="footer-mark">TAMAN BUNGA MATAHARI MILIK SAFA</span>
+      <span>planted with a little love <span aria-hidden="true">♡</span></span>
+    </footer>
+
+    <dialog class="magic-dialog" aria-labelledby="magic-title">
+      <div class="magic-scene">
+        <button class="magic-next" type="button"><span class="ornament" aria-hidden="true">✿</span> Take a look at another one <span class="ornament" aria-hidden="true">↗</span></button>
+        <div class="magic-message">
+          <p>a little magic for you</p>
+          <h2 id="magic-title">Look, it's flying! ✨</h2>
+          <span>I love you</span>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="letter-dialog" aria-labelledby="letter-title">
+      <div class="letter-scene">
+        <button class="letter-close" type="button" aria-label="Close letter">×</button>
+        <button class="letter-envelope" type="button" aria-label="Open the letter" aria-expanded="false">
+          <span class="letter-paper">
+            <span class="letter-flower">🌻</span>
+            <span>Dear Safa,</span>
+            <strong>Read me when u free</strong>
+            <span class="letter-signoff">I love you ♡</span>
+          </span>
+          <span class="envelope-back"></span>
+          <span class="envelope-flap"></span>
+          <span class="envelope-front"></span>
+          <span class="envelope-seal">♡</span>
+        </button>
+        <p class="letter-hint">Tap the envelope to open it</p>
+        <h2 id="letter-title">A little letter for you</h2>
+      </div>
+    </dialog>
+
+    <dialog class="writing-dialog" aria-labelledby="writing-title">
+      <div class="writing-page">
+        <div class="writing-page-header">
+          <div>
+            <p class="writing-eyebrow">A LITTLE SPACE FOR YOUR WORDS</p>
+            <h2 id="writing-title">Write your letter</h2>
+          </div>
+        </div>
+        <label class="sr-only" for="letter-text">Your letter</label>
+        <textarea id="letter-text" maxlength="10000" placeholder="Dear Safa,&#10;&#10;Write anything you want to tell her here..."></textarea>
+        <div class="writing-page-footer">
+          <p class="writing-status" role="status" aria-live="polite"></p>
+          <button class="writing-dismiss" type="button" aria-label="Close writing page">♡</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="page-transition" aria-label="Page transition">
+      <div class="page-transition-curtain" aria-hidden="true"></div>
+      <div class="page-transition-hearts" aria-hidden="true"></div>
+      <iframe class="closing-frame" src="blank.html" title="Romantic closing page"></iframe>
+    </dialog>
+
+    <audio id="background-music" autoplay loop preload="auto" aria-label="Everlasting Love by LEEHEESANG">
+      <source src="assets/everlasting-love.mp3" type="audio/mpeg" />
+    </audio>
+    <button class="music-toggle" id="background-music-toggle" type="button" aria-label="Play song" aria-pressed="false">
+      <span aria-hidden="true">♫</span>
+      <span class="music-toggle-label">Play song</span>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

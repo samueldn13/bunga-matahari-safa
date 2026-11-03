@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fffdf6" />
+    <title>A little more love</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "DM Sans", "Segoe UI", sans-serif;
+        color: #344a38;
+        background: #fffdf6;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse at 50% 100%, rgba(216, 232, 199, .55), transparent 48%),
+          #fffdf6;
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+        width: min(560px, calc(100% - 40px));
+        padding: clamp(32px, 8vw, 64px) 24px;
+        text-align: center;
+        animation: arrive 1.1s cubic-bezier(.2, .8, .2, 1) both;
+      }
+
+      .flower {
+        display: inline-block;
+        margin-bottom: 20px;
+        font-size: 45px;
+        animation: sway 3.2s ease-in-out infinite;
+        transform-origin: 50% 100%;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: #899578;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .2em;
+      }
+
+      h1 {
+        margin: 0;
+        color: #304735;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: clamp(36px, 8vw, 58px);
+        font-weight: 600;
+        letter-spacing: -.045em;
+        line-height: 1.12;
+      }
+
+      h1 span { color: #c27b68; }
+
+      .message {
+        max-width: 410px;
+        margin: 22px auto 0;
+        color: #687365;
+        font-size: clamp(14px, 3.5vw, 16px);
+        line-height: 1.9;
+      }
+
+      .signoff {
+        margin: 28px 0 0;
+        color: #52654e;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 17px;
+        font-style: italic;
+      }
+
+      .heart {
+        display: inline-block;
+        margin-top: 20px;
+        color: #d77f86;
+        font-size: 22px;
+        animation: heartbeat 1.8s ease-in-out infinite;
+      }
+
+      .music-toggle {
+        position: fixed;
+        z-index: 2;
+        right: max(18px, env(safe-area-inset-right));
+        bottom: max(18px, env(safe-area-inset-bottom));
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 16px;
+        border: 1px solid rgba(255,255,255,.75);
+        border-radius: 999px;
+        color: #fff;
+        background: #527451;
+        box-shadow: 0 8px 24px rgba(31, 48, 34, .18);
+        font: inherit;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .music-toggle:focus-visible { outline: 3px solid #d99a25; outline-offset: 3px; }
+
+      .petal {
+        position: absolute;
+        top: -12vh;
+        left: var(--left);
+        color: #d77f86;
+        opacity: 0;
+        pointer-events: none;
+        animation: drift var(--duration) linear var(--delay) infinite;
+      }
+
+      @keyframes arrive {
+        from { opacity: 0; transform: translateY(18px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes sway {
+        0%, 100% { transform: rotate(-7deg); }
+        50% { transform: rotate(7deg); }
+      }
+
+      @keyframes heartbeat {
+        0%, 100% { transform: scale(1); }
+        15% { transform: scale(1.16); }
+        30% { transform: scale(1); }
+        45% { transform: scale(1.1); }
+      }
+
+      @keyframes drift {
+        0% { opacity: 0; transform: translate3d(0, 0, 0) rotate(0); }
+        12% { opacity: .48; }
+        85% { opacity: .38; }
+        100% { opacity: 0; transform: translate3d(28px, 120vh, 0) rotate(300deg); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: .01ms !important;
+          animation-iteration-count: 1 !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="music-toggle" id="closing-music-toggle" type="button" aria-label="Play song" aria-pressed="false">
+      <span aria-hidden="true">♫</span>
+      <span class="music-toggle-label">Play song</span>
+    </button>
+    <span class="petal" aria-hidden="true" style="--left: 8%; --duration: 13s; --delay: -2s">♡</span>
+    <span class="petal" aria-hidden="true" style="--left: 23%; --duration: 16s; --delay: -9s">✿</span>
+    <span class="petal" aria-hidden="true" style="--left: 41%; --duration: 14s; --delay: -5s">♡</span>
+    <span class="petal" aria-hidden="true" style="--left: 63%; --duration: 17s; --delay: -12s">✿</span>
+    <span class="petal" aria-hidden="true" style="--left: 82%; --duration: 15s; --delay: -7s">♡</span>
+    <main>
+      <span class="flower" aria-hidden="true">🌻</span>
+      <p class="eyebrow">A LITTLE NOTE, FROM MY HEART</p>
+      <h1>Wherever life takes us,<br /><span>you'll have my heart.</span></h1>
+      <p class="message">
+        Terima kasih sudah menjadi bagian paling hangat dalam hari-hariku.
+        Semoga setiap langkahmu dipenuhi hal-hal baik—dan semoga kamu selalu
+        ingat, ada seseorang yang mendoakanmu dengan penuh sayang.
+      </p>
+      <p class="signoff">Love, Samuel</p>
+      <span class="heart" aria-hidden="true">♥</span>
+    </main>
+    <script>
+      const musicToggle = document.querySelector("#closing-music-toggle");
+      const setMusicState = (playing) => {
+        musicToggle.setAttribute("aria-label", playing ? "Pause song" : "Play song");
+        musicToggle.setAttribute("aria-pressed", String(playing));
+        musicToggle.querySelector(".music-toggle-label").textContent = playing ? "Pause song" : "Play song";
+      };
+
+      musicToggle.addEventListener("click", () => {
+        window.parent.postMessage({ type: "music-toggle" }, "*");
+      });
+      window.addEventListener("message", (event) => {
+        if (event.data?.type === "music-state") setMusicState(event.data.playing);
+      });
+      window.parent.postMessage({ type: "music-state-request" }, "*");
+    </script>
+  </body>
+</html>
